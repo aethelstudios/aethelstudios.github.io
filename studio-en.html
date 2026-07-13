@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio — Aethel Studios</title>
+<meta name="description" content="Aethel Studios is a one-person indie studio focused on simulation and puzzle games with pixel art and low poly.">
+<link rel="icon" href="assets/logo.png" type="image/png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="estudio">
+
+<div class="backdrop" id="backdrop"></div>
+
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-head">
+    <a href="index-en.html" class="brand">
+      <span class="logo-wrap">
+        <img src="assets/logo.png" alt="Aethel Studios logo" class="logo-img" onerror="this.style.display='none'; this.closest('.logo-wrap').classList.add('missing');">
+        <span class="logo-fallback">AS</span>
+      </span>
+      <span class="brand-text">AETHEL<br>STUDIOS</span>
+    </a>
+    <button class="collapse-btn" id="collapseBtn" aria-label="Collapse menu">&laquo;</button>
+  </div>
+  <nav class="side-nav">
+   <a href="index-en.html" data-page="home" class="nav-item" title="Home">
+  <svg viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true" fill="#4DA6FF">
+    <rect x="7" y="1" width="2" height="1"/>
+    <rect x="6" y="2" width="1" height="1"/>
+    <rect x="9" y="2" width="1" height="1"/>
+    <rect x="5" y="3" width="1" height="1"/>
+    <rect x="10" y="3" width="1" height="1"/>
+    <rect x="4" y="4" width="1" height="1"/>
+    <rect x="11" y="4" width="1" height="1"/>
+    <rect x="3" y="5" width="10" height="1"/>
+    <rect x="4" y="6" width="8" height="8"/>
+    <rect x="6" y="10" width="4" height="4" fill="#121915"/>
+  </svg>
+  <span class="nav-label">Home</span>
+</a>
+
+<a href="games-en.html" data-page="juegos" class="nav-item" title="Games">
+  <svg viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true" fill="#4DA6FF">
+    <rect x="3" y="6" width="10" height="5"/>
+    <rect x="1" y="7" width="2" height="3"/>
+    <rect x="13" y="7" width="2" height="3"/>
+    <rect x="4" y="7" width="1" height="1" fill="#121915"/>
+    <rect x="3" y="8" width="1" height="1" fill="#121915"/>
+    <rect x="5" y="8" width="1" height="1" fill="#121915"/>
+    <rect x="4" y="9" width="1" height="1" fill="#121915"/>
+    <rect x="10" y="8" width="1" height="1" fill="#121915"/>
+    <rect x="12" y="8" width="1" height="1" fill="#121915"/>
+  </svg>
+  <span class="nav-label">Games</span>
+</a>
+
+<a href="studio-en.html" data-page="estudio" class="nav-item" title="Studio">
+  <svg viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true" fill="#4DA6FF">
+    <rect x="3" y="2" width="10" height="12"/>
+    <rect x="5" y="4" width="6" height="1" fill="#121915"/>
+    <rect x="5" y="6" width="6" height="1" fill="#121915"/>
+    <rect x="5" y="8" width="4" height="1" fill="#121915"/>
+  </svg>
+  <span class="nav-label">Studio</span>
+</a>
+
+<a href="team-en.html" data-page="equipo" class="nav-item" title="Team">
+  <svg viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true" fill="#4DA6FF">
+    <rect x="6" y="2" width="4" height="4"/>
+    <rect x="4" y="7" width="8" height="7"/>
+  </svg>
+  <span class="nav-label">Team</span>
+</a>
+  </nav>
+  <div class="sidebar-foot">
+    <div class="lang-switch">
+      <a href="estudio.html" class="lang-btn current" aria-label="Espanol" title="Espanol">
+  <img src="assets/es.png" alt="Español">
+</a>
+<a href="studio-en.html" class="lang-btn" aria-label="English" title="English">
+  <img src="assets/gb.png" alt="English">
+</a>
+    </div>
+    <a href="https://aethelstudios.itch.io" target="_blank" rel="noopener" class="itch-pill">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.55 3.4C3.53 4 2 5.8 2 6.5c0 1.4 1.4 2.8 2.9 2.8 1.7 0 3-1.3 3-1.3s1.3 1.3 3.1 1.3c1.7 0 3-1.3 3-1.3s1.4 1.3 3.1 1.3c1.9 0 3.3-1.4 3.3-2.8 0-.7-1.5-2.5-2.5-3.1C17.1 3 15.4 3 12 3S6.9 3 4.55 3.4zM3.2 10.6V19c0 .6.4 1 1 1H10v-4.2c0-.6.5-1 1-1h2c.6 0 1 .4 1 1V20h5.8c.6 0 1-.4 1-1v-8.4c-.7.3-1.5.5-2.4.5-1.5 0-2.7-.5-3.4-1-.7.5-1.9 1-3.3 1s-2.6-.5-3.3-1c-.7.5-1.9 1-3.4 1-.9 0-1.7-.2-2.4-.5z"/></svg>
+      <span>Aethel on itch.io</span>
+    </a>
+    <div class="fine">&copy; <span class="year"></span> Aethel Studios</div>
+  </div>
+</aside>
+
+<div class="mobile-topbar">
+  <button class="hamburger" id="mobileToggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <span class="mobile-brand">AETHEL STUDIOS</span>
+</div>
+
+<main class="main">
+
+  <section style="padding-top: clamp(4rem, 8vw, 6rem);">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">The studio</div>
+        <h2 style="font-size:clamp(1.5rem,3.5vw,2.2rem);">Small ideas, honest decisions.</h2>
+        <p>Aethel Studios is a one-person indie studio. We're not chasing realistic graphics or huge worlds: we care about minimalist pixel art and low poly, and simulation or logic games that make you stop and think before you press a button.</p>
+      </div>
+
+      <div class="pillars reveal">
+        <div class="pillar">
+          <svg class="glyph" viewBox="0 0 40 40" shape-rendering="crispEdges" aria-hidden="true">
+            <rect x="4" y="4" width="8" height="8"/><rect x="28" y="4" width="8" height="8"/>
+            <rect x="4" y="28" width="8" height="8"/><rect x="28" y="28" width="8" height="8"/>
+            <rect x="16" y="16" width="8" height="8"/>
+          </svg>
+          <h3>Simulation before reflexes</h3>
+          <p>We prefer systems that react and challenges that get solved by thinking, not matches won through fast reaction time.</p>
+        </div>
+        <div class="pillar">
+          <svg class="glyph" viewBox="0 0 40 40" shape-rendering="crispEdges" aria-hidden="true">
+            <rect x="6" y="6" width="10" height="10"/><rect x="22" y="6" width="10" height="10"/>
+            <rect x="6" y="22" width="10" height="10"/><rect x="22" y="22" width="10" height="10"/>
+          </svg>
+          <h3>Pixel art and low poly, unapologetically</h3>
+          <p>We choose simple aesthetics on purpose. Fewer hours polishing textures, more hours polishing mechanics and levels.</p>
+        </div>
+        <div class="pillar">
+          <svg class="glyph" viewBox="0 0 40 40" shape-rendering="crispEdges" aria-hidden="true">
+            <rect x="17" y="4" width="6" height="6"/><rect x="17" y="30" width="6" height="6"/>
+            <rect x="4" y="17" width="6" height="6"/><rect x="30" y="17" width="6" height="6"/>
+            <rect x="17" y="17" width="6" height="6"/>
+          </svg>
+          <h3>One dev, no noise</h3>
+          <p>Aethel Studios is run by one person. Every design decision goes through a single head, for better and for worse.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="mission">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Two games, one idea</div>
+        <h2 style="font-size:clamp(1.3rem,3vw,1.8rem);">Not everything has to be scary to make you think.</h2>
+        <p>False Exit and The Night Potato look like opposites: one is a quiet pixel art puzzle, the other a low poly horror simulator. But they share the same foundation: simple systems, no filler, where what matters happens in your head, not your reflexes.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="page-footer">
+    Aethel Studios &mdash; One dev. Games that make you think.
+  </footer>
+
+</main>
+
+<script src="script.js" defer></script>
+</body>
+</html>

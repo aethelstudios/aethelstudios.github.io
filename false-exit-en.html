@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>False Exit — Aethel Studios</title>
+<meta name="description" content="False Exit: a pixel art puzzle game where every exit hides a logic challenge. Downloadable demo on itch.io.">
+<link rel="icon" href="assets/logo.png" type="image/png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="fexit">
+
+<div class="backdrop" id="backdrop"></div>
+
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-head">
+    <a href="index-en.html" class="brand">
+      <span class="logo-wrap">
+        <img src="assets/logo.png" alt="Aethel Studios logo" class="logo-img" onerror="this.style.display='none'; this.closest('.logo-wrap').classList.add('missing');">
+        <span class="logo-fallback">AS</span>
+      </span>
+      <span class="brand-text">AETHEL<br>STUDIOS</span>
+    </a>
+    <button class="collapse-btn" id="collapseBtn" aria-label="Collapse menu">&laquo;</button>
+  </div>
+  <nav class="side-nav">
+    <a href="index-en.html" data-page="home" class="nav-item" title="Home">
+  <svg viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true" fill="#4DA6FF">
+    <rect x="7" y="1" width="2" height="1"/>
+    <rect x="6" y="2" width="1" height="1"/>
+    <rect x="9" y="2" width="1" height="1"/>
+    <rect x="5" y="3" width="1" height="1"/>
+    <rect x="10" y="3" width="1" height="1"/>
+    <rect x="4" y="4" width="1" height="1"/>
+    <rect x="11" y="4" width="1" height="1"/>
+    <rect x="3" y="5" width="10" height="1"/>
+    <rect x="4" y="6" width="8" height="8"/>
+    <rect x="6" y="10" width="4" height="4" fill="#121915"/>
+  </svg>
+  <span class="nav-label">Home</span>
+</a>
+
+<a href="games-en.html" data-page="juegos" class="nav-item" title="Games">
+  <svg viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true" fill="#4DA6FF">
+    <rect x="3" y="6" width="10" height="5"/>
+    <rect x="1" y="7" width="2" height="3"/>
+    <rect x="13" y="7" width="2" height="3"/>
+    <rect x="4" y="7" width="1" height="1" fill="#121915"/>
+    <rect x="3" y="8" width="1" height="1" fill="#121915"/>
+    <rect x="5" y="8" width="1" height="1" fill="#121915"/>
+    <rect x="4" y="9" width="1" height="1" fill="#121915"/>
+    <rect x="10" y="8" width="1" height="1" fill="#121915"/>
+    <rect x="12" y="8" width="1" height="1" fill="#121915"/>
+  </svg>
+  <span class="nav-label">Games</span>
+</a>
+
+<a href="studio-en.html" data-page="estudio" class="nav-item" title="Studio">
+  <svg viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true" fill="#4DA6FF">
+    <rect x="3" y="2" width="10" height="12"/>
+    <rect x="5" y="4" width="6" height="1" fill="#121915"/>
+    <rect x="5" y="6" width="6" height="1" fill="#121915"/>
+    <rect x="5" y="8" width="4" height="1" fill="#121915"/>
+  </svg>
+  <span class="nav-label">Studio</span>
+</a>
+
+<a href="team-en.html" data-page="equipo" class="nav-item" title="Team">
+  <svg viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true" fill="#4DA6FF">
+    <rect x="6" y="2" width="4" height="4"/>
+    <rect x="4" y="7" width="8" height="7"/>
+  </svg>
+  <span class="nav-label">Team</span>
+</a>
+  </nav>
+  <div class="sidebar-foot">
+    <div class="lang-switch">
+      <a href="false-exit.html" class="lang-btn current" aria-label="Espanol" title="Espanol">
+  <img src="assets/es.png" alt="Español">
+</a>
+<a href="false-exit-en.html" class="lang-btn" aria-label="English" title="English">
+  <img src="assets/gb.png" alt="English">
+</a>
+    </div>
+    <a href="https://aethelstudios.itch.io" target="_blank" rel="noopener" class="itch-pill">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.55 3.4C3.53 4 2 5.8 2 6.5c0 1.4 1.4 2.8 2.9 2.8 1.7 0 3-1.3 3-1.3s1.3 1.3 3.1 1.3c1.7 0 3-1.3 3-1.3s1.4 1.3 3.1 1.3c1.9 0 3.3-1.4 3.3-2.8 0-.7-1.5-2.5-2.5-3.1C17.1 3 15.4 3 12 3S6.9 3 4.55 3.4zM3.2 10.6V19c0 .6.4 1 1 1H10v-4.2c0-.6.5-1 1-1h2c.6 0 1 .4 1 1V20h5.8c.6 0 1-.4 1-1v-8.4c-.7.3-1.5.5-2.4.5-1.5 0-2.7-.5-3.4-1-.7.5-1.9 1-3.3 1s-2.6-.5-3.3-1c-.7.5-1.9 1-3.4 1-.9 0-1.7-.2-2.4-.5z"/></svg>
+      <span>Aethel on itch.io</span>
+    </a>
+    <div class="fine">&copy; <span class="year"></span> Aethel Studios</div>
+  </div>
+</aside>
+
+<div class="mobile-topbar">
+  <button class="hamburger" id="mobileToggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <span class="mobile-brand">AETHEL STUDIOS</span>
+</div>
+
+<main class="main">
+
+  <section class="game-hero">
+    <div class="game-art reveal media-swap">
+      <img class="media-img" src="assets/falseexitResized.png" alt="False Exit key art" onerror="this.style.display='none'; this.closest('.media-swap').classList.add('missing');">
+      <div class="media-fallback">
+        <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" shape-rendering="crispEdges">
+          <rect x="0" y="0" width="400" height="500" fill="#141d18"/>
+          <g fill="none" stroke="#4da6ff" stroke-width="2" opacity="0.9">
+            <rect x="60" y="90" width="280" height="320"/>
+            <rect x="100" y="130" width="200" height="240"/>
+          </g>
+          <g fill="#ffd166">
+            <rect x="140" y="180" width="18" height="18"/>
+            <rect x="180" y="180" width="18" height="18"/>
+            <rect x="220" y="180" width="18" height="18"/>
+            <rect x="180" y="220" width="18" height="18"/>
+            <rect x="180" y="260" width="18" height="18"/>
+          </g>
+          <text x="200" y="450" text-anchor="middle" fill="#eef0e6" font-family="monospace" font-size="18" letter-spacing="2">FALSE EXIT</text>
+        </svg>
+      </div>
+    </div>
+    <div class="reveal">
+      <a href="games-en.html" class="back-link">&larr; Back to games</a>
+      <div class="status-tag"><span class="dot"></span>Demo available on itch.io</div>
+      <h1>FALSE EXIT</h1>
+      <p>You control a tiny pixel adventurer trapped in a series of rooms that aren't what they seem. Every "exit" is actually a puzzle: sequences, logic, and rooms that change the rules right when you think you've figured them out.</p>
+      <p>The game is still in development, but you can already play a downloadable demo on itch.io. No combat, no impossible timers: False Exit is meant to be played slowly, leaving you mentally tired instead of thumb-sore.</p>
+      <div class="game-meta">
+        <div>Genre<b>Puzzle &middot; Logic simulation</b></div>
+        <div>Platform<b>PC (itch.io)</b></div>
+        <div>Status<b>In development &middot; demo available</b></div>
+      </div>
+      <a href="https://aethelstudios.itch.io/false-exit" target="_blank" rel="noopener" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.55 3.4C3.53 4 2 5.8 2 6.5c0 1.4 1.4 2.8 2.9 2.8 1.7 0 3-1.3 3-1.3s1.3 1.3 3.1 1.3c1.7 0 3-1.3 3-1.3s1.4 1.3 3.1 1.3c1.9 0 3.3-1.4 3.3-2.8 0-.7-1.5-2.5-2.5-3.1C17.1 3 15.4 3 12 3S6.9 3 4.55 3.4zM3.2 10.6V19c0 .6.4 1 1 1H10v-4.2c0-.6.5-1 1-1h2c.6 0 1 .4 1 1V20h5.8c.6 0 1-.4 1-1v-8.4c-.7.3-1.5.5-2.4.5-1.5 0-2.7-.5-3.4-1-.7.5-1.9 1-3.3 1s-2.6-.5-3.3-1c-.7.5-1.9 1-3.4 1-.9 0-1.7-.2-2.4-.5z"/></svg>
+        Download demo on itch.io
+      </a>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">What you'll find</div>
+        <h2>Puzzles before reflexes.</h2>
+      </div>
+      <ul class="feature-list reveal">
+        <li><svg viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="2" y="2" width="12" height="12" fill="none" stroke="currentColor"/><rect x="6" y="6" width="4" height="4"/></svg>Logic and sequence puzzles, no reflexes or quick trigger fingers</li>
+        <li><svg viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="2" y="2" width="12" height="12" fill="none" stroke="currentColor"/><rect x="6" y="6" width="4" height="4"/></svg>Rooms that change the rules right when you think you've got them</li>
+        <li><svg viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="2" y="2" width="12" height="12" fill="none" stroke="currentColor"/><rect x="6" y="6" width="4" height="4"/></svg>Minimalist pixel art aesthetic</li>
+        <li><svg viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="2" y="2" width="12" height="12" fill="none" stroke="currentColor"/><rect x="6" y="6" width="4" height="4"/></svg>No combat, no impossible timers, no filler</li>
+      </ul>
+
+      <div class="section-head reveal">
+        <div class="eyebrow">Screenshots</div>
+        <h2>A look inside the rooms.</h2>
+      </div>
+      <div class="shots reveal">
+        <div class="shot">
+          <svg viewBox="0 0 320 200" shape-rendering="crispEdges"><rect width="320" height="200" fill="#141d18"/><rect x="40" y="40" width="240" height="120" fill="none" stroke="#4da6ff" stroke-width="2"/><rect x="140" y="80" width="16" height="16" fill="#ffd166"/><rect x="180" y="100" width="16" height="16" fill="#ffd166"/></svg>
+        </div>
+        <div class="shot">
+          <svg viewBox="0 0 320 200" shape-rendering="crispEdges"><rect width="320" height="200" fill="#182019"/><rect x="60" y="30" width="200" height="140" fill="none" stroke="#ffd166" stroke-width="2"/><rect x="100" y="70" width="16" height="16" fill="#4da6ff"/><rect x="204" y="70" width="16" height="16" fill="#4da6ff"/><rect x="150" y="120" width="16" height="16" fill="#4da6ff"/></svg>
+        </div>
+        <div class="shot">
+          <svg viewBox="0 0 320 200" shape-rendering="crispEdges"><rect width="320" height="200" fill="#141d18"/><circle cx="160" cy="100" r="60" fill="none" stroke="#4da6ff" stroke-width="2"/><rect x="152" y="92" width="16" height="16" fill="#eef0e6"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="download">
+    <div class="container">
+      <div class="contact-box reveal">
+        <h2 style="margin-bottom:0.8rem; font-size:1.1rem;">Play it on itch.io</h2>
+        <p style="color:var(--chalk-dim); font-size:0.9rem;">The False Exit demo is available to download directly from itch.io.</p>
+        <a href="https://aethelstudios.itch.io/false-exit" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:1.2rem;">
+          Download demo on itch.io
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="page-footer">
+    Aethel Studios &mdash; One dev. Games that make you think.
+  </footer>
+
+</main>
+
+<script src="script.js" defer></script>
+</body>
+</html>
